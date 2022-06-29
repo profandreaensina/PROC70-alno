@@ -31,9 +31,8 @@ export default class TransactionScreen extends Component {
     const { status } = await Permissions.askAsync(Permissions.CAMERA);
 
     this.setState({
-      /*status === "granted" é verdadeiro se o usuário concedeu permissão
-          status === "granted" é falso se o usuário não concedeu permissão
-        */
+      /* status === "granted" é verdadeiro se o usuário concedeu permissão
+         status === "granted" é falso se o usuário não concedeu permissão */
       hasCameraPermissions: status === "granted",
       domState: domState,
       scanned: false
@@ -43,19 +42,9 @@ export default class TransactionScreen extends Component {
   handleBarCodeScanned = async ({ type, data }) => {
     const { domState } = this.state;
 
-    if (domState === "bookId") {
-      this.setState({
-        bookId: data,
-        domState: "normal",
-        scanned: true
-      });
-    } else if (domState === "studentId") {
-      this.setState({
-        studentId: data,
-        domState: "normal",
-        scanned: true
-      });
-    }
+    // 01. if que analisa domState e define se dados são studentId ou bookId 
+    
+    
   };
 
   render() {
