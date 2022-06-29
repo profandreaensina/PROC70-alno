@@ -70,7 +70,7 @@ export default class TransactionScreen extends Component {
                 style={styles.textinput}
                 placeholder={"ID do Livro"}
                 placeholderTextColor={"#FFFFFF"}
-                value={bookId}
+                value={/* 02. mostrar dados salvos no estado bookId */}
               />
               <TouchableOpacity
                 style={styles.scanbutton}
@@ -84,7 +84,7 @@ export default class TransactionScreen extends Component {
                 style={styles.textinput}
                 placeholder={"ID do Estudante"}
                 placeholderTextColor={"#FFFFFF"}
-                value={studentId}
+                value={/* 03. mostrar dados salvos no estado bookId */ }
               />
               <TouchableOpacity
                 style={styles.scanbutton}
